@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de texto</title>
+
+        <link rel="icon" type="image/png" href="Imagenes/icono.png">
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <main>
+            <header class="logo">
+                <img src="Imagenes/Vector.png" alt="logo">
+            </header>
+
+            <section class="seccion-izq">
+                <div class="input-container">
+                    <textarea maxlength="200" class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                    <div class="mensaje">
+                        <h6 class="informacion"> <img src="Imagenes/exclamacion.png" alt="exclamacion"> Solo letras minusculas y sin acentos</h6>
+                    </div>
+                    <div class="botones">
+                        <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+                
+            <section class="seccion-der">
+                <div class="cajaMensaje">
+                    <div class="foto">
+                        <img src="Imagenes/Muñeco.png" alt="muñeco">
+                    </div>
+                    <div class="msj">
+                        <h3>Ningun mensaje fue encontrado</h3>
+                        <p>Ingrese el texto que desee encriptar o desencriptar</p>
+                    </div>
+                </div>
+                <button class="copiar" data-clipboard-target=".cajaMensaje" onclick="copiarTexto()">Copiar</button>
+            </section>
+
+        </main>
+
+        <footer class="footer-contenedor">
+        
+            <img class="logo-one" src="Imagenes/rh03-one-v-black-lad2.png" alt="rh03-one-v-black-lad2">
+        
+            <p class="footer-texto">&copy 2023 - Todos los derechos reservados
+                <a href="https://www.linkedin.com/in/juan-ferraris-53997725/" target="_blank"><i class="fa-brands fa-linkedin" id="linkedin"></i></a>
+                <a href="https://github.com/juansenga/" target="_blank"><i class="fa-brands fa-github" id="github"></i></a>
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="https://kit.fontawesome.com/6f08c59482.js" crossorigin="anonymous"></script>
+
+        <script>
+            var clipboard = new ClipboardJS(".copiar")
+        </script>
+
+    </body>
+
+</html>
